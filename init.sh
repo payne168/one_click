@@ -53,8 +53,8 @@ echo ""
 echo -e "\033[33m 正在下载所需脚本! \033[0m"
 echo ""
 echo "--------------------------------------------------------"
-mkdir -p ~/storage/shared/water_drop/
-cd ~/storage/shared/water_drop/
+mkdir -p ~/storage/shared/water_drop_init/
+cd ~/storage/shared/water_drop_init/
 git clone https://github.com/payne168/termux_control.git
 #执行脚本
 echo "--------------------------------------------------------"
@@ -62,4 +62,6 @@ echo ""
 echo -e "\033[32m 开始执行脚本! \033[0m"
 echo ""
 echo "--------------------------------------------------------"
-python3 ~/storage/shared/water_drop/termux_control/test.py
+cd ~/storage/shared/water_drop_init/atx-agent
+sleep 5
+python3 ~/storage/shared/water_drop_init/termux_control/launch.py
